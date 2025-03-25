@@ -2,26 +2,15 @@ from Modules_supplementaires import choix_menu,choix_caracteres
 from Generateur_Password import generateur_password
 print("bienvenue cher utlisateurs et merci de nous avoir choisi")
 Choix_menu = [
-       "A : Generer un nouveau mot d passe",
+       "A : Generer un nouveau mot de passe",
        "B : Voir un mot de passe specifique",
-       "C : Voir tout les mots de passe enregistres"
-    ]
+       "C : Voir tout les mots de passe enregistres"]
+  
 choix = input(f":Quelles oprations parmi les suivantes souhaitez vous effectue : {Choix_menu}")
-print("ecrivez uniquement la lettre de l'operation souhaitee")
+print("Entrer uniquement la lettre de l'operation souhaitee")
 result = choix_menu(choix)
 print(result)
 
-liste_Password ={
-1 :"G4xLpM8d!",
-2 :"P@ssw0rdK1ng",
-3 :"L3ttr3sM4g1qu3s",
-4 : "S3cur1tYp@ss",
-5 : "M0nt4g3sP@ssw0rd",
-6 : "F4nt4st1cP@ss",
-7 : "R3v3l4t10nS3cr3t",
-8 : "C0d3s3cur1tY",
-9 : "P@ssw0rdM4g1c",
-10 : "S3cur1t3P@ssw0rdL3v3l"}
 if choix == Choix_menu[0] :
     longeur = int(input("Ecrivez la longueur du mot de passe que vous souhaitez (entre 8 et 32 caracteres) :  "))
     resultat = generateur_password(longueur=longeur)
@@ -64,7 +53,23 @@ if choix == Choix_menu[1] :
     longeur = int(input("Ecrivez la longueur du mot de passe que vous souhaitez (entre 8 et 32 caracteres) :  "))
     resultat = generateur_password(longueur=longeur)
     print(resultat) 
-    
+
+liste_Password ={
+1 :"G4xLpM8d!",
+2 :"P@ssw0rdK1ng",
+3 :"L3ttr3sM4g1qu3s",
+4 : "S3cur1tYp@ss",
+5 : "M0nt4g3sP@ssw0rd",
+6 : "F4nt4st1cP@ss",
+7 : "R3v3l4t10nS3cr3t",
+8 : "C0d3s3cur1tY",
+9 : "P@ssw0rdM4g1c",
+10 : "S3cur1t3P@ssw0rdL3v3l"}
+if choix == Choix_menu[2] :
+    for password in liste_Password :
+        print(f"Liste de mot de passe : {password}")
+        
+
     
 
 
